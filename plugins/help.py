@@ -2,6 +2,7 @@
 import os
 
 from pyrogram import Client, filters
+from presets import Presets
 
 if bool(os.environ.get("ENV", False)):
     from sample_config import Config
@@ -14,9 +15,10 @@ async def help_me(bot, message):
     if message.from_user.id == Config.ADMIN:
         return
     info = await bot.get_users(user_ids=message.from_user.id)
-    await bot.send_message(chat_id=message.chat.id, text="Yazilacag start mesaji", reply_markup=BUTONLAR)
+    await bot.send_message(
         chat_id=message.chat.id,
         text=Presets.WELCOME_TEXT.format(info.first_name)
+        parse_mode="html"
     )
     await bot.send_message(
         chat_id=Config.ADMIN,
