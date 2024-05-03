@@ -1,7 +1,7 @@
 #-------------------------------------- https://github.com/m4mallu/PMChatbot ------------------------------------------#
 import os
 import logging
-
+import config
 from pyrogram import Client
 
 logging.basicConfig(level=logging.DEBUG,
