@@ -1,5 +1,4 @@
 #-------------------------------------- https://github.com/m4mallu/PMChatbot ------------------------------------------#
 pyrogram==2.0
 TgCrypto
-pip3 install -U https://github.com/pyrogram/pyrogram/archive/master.zip
 git+https://github.com/pyrogram/pyrogram/archive/master.zip
